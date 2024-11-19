@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Contraseñas</h1>
+        <form action="{{ url_for('generar') }}" method="post">
+            <label for="longitud">Longitud de la Contraseña:</label>
+            <input type="number" id="longitud" name="longitud" min="6" max="24" value="12" required>
+            <button type="submit" class="button">Generar</button>
+        </form>
+    </div>
+</body>
+</html>
+ 
